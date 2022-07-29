@@ -1,0 +1,44 @@
+.sign_in_page {
+  min-height: 100vh;
+  background-color: $background;
+
+  &__box {
+    background-color: $primary-dark;
+    padding: 50px 100px;
+  }
+
+  &__form {
+    width: 450px;
+    > div {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    color: #343653;
+    &::after {
+      display: block;
+      background-color: #343653;
+      content: '';
+      height: 1px;
+      width: 250px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+
+  .logo-wrapper {
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}

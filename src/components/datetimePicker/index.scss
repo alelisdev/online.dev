@@ -1,0 +1,16 @@
+.datetime-picker {
+  color: #343653;
+  .rdtPicker {
+    //background-color: #14152f;
+    border-radius: 10px;
+
+    td.rdtActive {
+      border-radius: 50%;
+      height: 34.28px;
+    }
+
+    td.rdtDay:hover {
+      border-radius: 50%;
+    }
+  }
+}

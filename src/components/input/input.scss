@@ -1,0 +1,94 @@
+//TODO add here general styles
+
+.input-component {
+  &__container {
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    background-color: #202044 ;
+    padding-left: 16px;
+
+    input,
+    input:focus {
+      border: none;
+      background-color: #202044 ;
+      color: #70718b ;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      outline: 0px;
+      box-shadow: none;
+    }
+
+    .icon {
+      color: $primary;
+      font-size: 1rem;
+    }
+  }
+}
+
+.main-input-component {
+  label.form-label {
+    color: #6e6e77;
+    margin-bottom: 0.3rem;
+  }
+
+  &__container {
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    background-color: #202044;
+    padding-left: 12px;
+
+    textarea,
+    textarea:focus {
+      border: none;
+      background-color: #202044 ;
+      color: $white ;
+      // font-style: italic;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 6px;
+      outline: 0px ;
+      box-shadow: none;
+    }
+
+    input,
+    input:focus {
+      border: none;
+      background-color: #202044;
+      color: $white ;
+      // font-style: italic;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 6px;
+      outline: 0px ;
+      box-shadow: none;
+    }
+
+    .icon {
+      color: $primary;
+      font-size: 1rem;
+    }
+  }
+}
+
+//TODO refactor styles here
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px #202044 inset;
+  -webkit-text-fill-color: $white !important;
+}
+
+.light-mode input:-webkit-autofill,
+.light-mode input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px #cecedf inset;
+  -webkit-text-fill-color: #272b2b !important;
+}
+
+input[data-com-onepassword-filled='dark'],
+input[data-com-onepassword-filled='light'],
+input[data-com-onepassword-filled='dark']:focus,
+input[data-com-onepassword-filled='light']:focus {
+  -webkit-box-shadow: 0 0 0 50px #202044 inset;
+  -webkit-text-fill-color: inset !important;
+}

@@ -1,0 +1,52 @@
+body {
+  background-color: $background;
+}
+.user_layout {
+  background-color: $background;
+  min-height: 100vh;
+  color: $white;
+
+  &__container {
+    padding: 0 10px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__container {
+      padding: 0 10px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__container {
+      padding: 0 75px;
+    }
+  }
+}
+
+body.light-mode{
+  background-color: $light-background;
+  .user_layout {
+    background-color: $light-background;
+    min-height: 100vh;
+    color: $light-black;
+
+    &__container {
+      padding: 0 10px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      &__container {
+        padding: 0 10px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      &__container {
+        padding: 0 75px;
+      }
+    }
+  }
+}
+
+
+

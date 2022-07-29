@@ -1,0 +1,637 @@
+//TODO implement colors here from badcss
+
+$primary: #4a9cff;
+$light: #fff;
+$primary-dark: #14152f;
+$primary-dark-input: #202044;
+$secondary: #9732e7;
+$dark: #191919;
+$background: #050515;
+$white: #fff;
+$background-grey: #1c1d3c;
+
+$light-primary: #a5dcff;
+$light-light: #f9f8ed;
+$light-primary-dark: #cecece;
+$light-primary-dark-input: #dae3e3;
+$light-secondary: #f8abfc;
+$light-dark: #627a84;
+$light-background: #f2f5f5;
+$light-white: #fff;
+$light-grey:#8c9191;
+$light-background-grey: #8c9194;
+$light-black: #272b2b;
+
+
+
+
+.meeting-calendar {
+  background: $primary-dark;
+  &.light-mode {
+    background-color: $light-primary-dark;
+  }
+}
+
+
+//month and week  styles is here
+
+.rbc-time-view {
+  border: none;
+  .rbc-header {
+    margin: 0;
+    border: none;
+    border-left: 2px $primary-dark solid;
+  }
+  .rbc-header + .rbc-header {
+    border-bottom: none;
+    border-left: 2px $primary-dark solid;
+  }
+  .rbc-time-header-content,
+  .rbc-time-header.rbc-overflowing {
+    border: none;
+  }
+  .rbc-timeslot-group {
+    border-bottom: 2px $primary-dark solid;
+  }
+
+  .rbc-time-gutter {
+    .rbc-timeslot-group {
+      background: $background-grey;
+    }
+    .rbc-time-slot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rbc-label {
+      color: #343653;
+      font-size: 11px;
+    }
+  }
+  .rbc-header {
+    min-height: 30px;
+    &.rbc-today {
+      background: $primary;
+    }
+  }
+
+  .rbc-day-slot {
+    &.rbc-now {
+      //background: #3083e7;
+      background: #343653;
+    }
+    .rbc-time-slot {
+      border: none;
+    }
+  }
+
+  .rbc-time-content {
+    background: #343653;
+  }
+
+  .rbc-time-content > * + * > * {
+    border-left:  2px $primary-dark solid;
+  }
+  .rbc-allday-cell {
+    //TODO need to investate this shit!!!
+    display: none;
+  }
+
+  .rbc-time-content {
+    border-top: none;
+  }
+}
+
+//toolbar and buttons styles is here
+
+.rbc-toolbar {
+  .rbc-btn-group:first-child {
+    display: flex;
+    button {
+      margin: 0 5px 0 0;
+      border-radius: 20px;
+      border: 1px #22243f solid;
+      min-width: 78px;
+      min-height: 36px;
+      line-height: 34px;
+      color: #fff;
+      padding: 0 1rem;
+      padding: 0 0 0 7px;
+      &::after {
+        content: '↪';
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        left: 7px;
+        color: #fff;
+        font-weight: 700;
+        margin: -18px 0 0;
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      &:first-child {
+        padding: 0;
+        order: 1;
+        &::after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        order: 2;
+        padding: 0 7px 0 0;
+        &::after {
+          content: '↩';
+          left: inherit;
+          right: 7px;
+          font-size: 10px;
+        }
+      }
+
+      &:focus {
+        background: #0a0b27;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.rbc-btn-group {
+  button {
+    border: none;
+    background: #0a0b27;
+    color: #676882;
+    font-size: 13px;
+    padding: 0.6rem 1rem;
+    position: relative;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+
+    &.rbc-active {
+      background: $primary;
+      color: #fff;
+    }
+
+    &:active:hover,
+    &:active:focus {
+      background: none;
+      opacity: 0.7;
+    }
+
+    &.rbc-active:hover,
+    &.rbc-active:focus {
+      background: $primary;
+      color: #fff;
+    }
+
+    &.rbc-active:hover {
+      opacity: 0.7;
+    }
+
+    &:hover {
+      background: none;
+      opacity: 0.7;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      width: 1px;
+      z-index: 2;
+      right: 0;
+      bottom: 6px;
+      background: #343653;
+    }
+
+    &:last-child:before {
+      display: none;
+    }
+  }
+}
+
+.rbc-toolbar-label {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.rbc-month-view {
+  border: none;
+}
+
+.rbc-header {
+  color: #fff;
+  font-size: 11px;
+  padding: 13px 3px;
+  border-bottom: 2px #555670 solid;
+  margin: 0 0 10px;
+
+  & + .rbc-header {
+    border-left: none;
+    border-bottom: 2px #555670 solid;
+  }
+}
+//month styles is here
+
+.rbc-month-row {
+  & + .rbc-month-row {
+    border-top: 2px $primary-dark solid;
+  }
+
+  .rbc-date-cell {
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+}
+
+.rbc-day-bg {
+  border-left: 2px $primary-dark solid;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+
+  &:hover {
+    -moz-transform: scale(0.96);
+    -webkit-transform: scale(0.96);
+    -o-transform: scale(0.96);
+    -ms-transform: scale(0.96);
+    transform: scale(0.96);
+  }
+
+  & + .rbc-day-bg {
+    border-left: 2px $primary-dark solid;
+  }
+  &.rbc-off-range-bg {
+    background: #1c1d3c;
+  }
+  background: #343653;
+
+  &.rbc-today {
+    background: #3083e7;
+  }
+}
+
+.rbc-row-content {
+  color: #f3f3f4;
+  font-size: 16px;
+}
+
+//events styles is here
+.rbc-event {
+  background-color: coral;
+  margin-left: 2%;
+  &:hover {
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    opacity: 0.8;
+  }
+  &.rbc-selected {
+    background-color: coral;
+  }
+}
+
+//agenda styles is here
+
+.rbc-agenda-date-cell {
+  background: #343653;
+  color: #f3f3f4;
+}
+.rbc-agenda-time-cell {
+  background: #343653;
+  color: #f3f3f4;
+  border-left: 1px #f3f3f4 solid;
+}
+.rbc-agenda-event-cell {
+  background: coral;
+  color: #f3f3f4;
+  &:hover {
+    -moz-transform: scale(1.001);
+    -webkit-transform: scale(1.001);
+    -o-transform: scale(1.001);
+    -ms-transform: scale(1.001);
+    transform: scale(1.001);
+    opacity: 0.8;
+  }
+}
+
+//light mode month and week  styles is here
+
+.light-mode .rbc-time-view {
+  border: none;
+  .rbc-header {
+    margin: 0;
+    border: none;
+    border-left: 2px $light-primary-dark solid;
+  }
+  .rbc-header + .rbc-header {
+    border-bottom: none;
+    border-left: 2px $light-primary-dark solid;
+  }
+  .rbc-time-header-content,
+  .rbc-time-header.rbc-overflowing {
+    border: none;
+  }
+  .rbc-timeslot-group {
+    border-bottom: 2px $light-primary-dark solid;
+  }
+
+  .rbc-time-gutter {
+    .rbc-timeslot-group {
+      background: $light-background-grey;
+    }
+    .rbc-time-slot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rbc-label {
+      color: $light-primary;
+      font-size: 11px;
+    }
+  }
+  .rbc-header {
+    min-height: 30px;
+    &.rbc-today {
+      background: $light-primary;
+    }
+  }
+
+  .rbc-day-slot {
+    &.rbc-now {
+      //background: #3083e7;
+      background: $light-background-grey;
+    }
+    .rbc-time-slot {
+      border: none;
+    }
+  }
+
+  .rbc-time-content {
+    background: $light-light;
+  }
+
+  .rbc-time-content > * + * > * {
+    border-left:  2px $light-primary-dark solid;
+  }
+  .rbc-allday-cell {
+    //TODO need to investate this shit!!!
+    display: none;
+  }
+
+  .rbc-time-content {
+    border-top: none;
+  }
+}
+
+//light toolbar and buttons styles is here
+
+.light-mode .rbc-toolbar {
+  .rbc-btn-group:first-child {
+    display: flex;
+    button {
+      margin: 0 5px 0 0;
+      border-radius: 20px;
+      border: 1px $light-background-grey solid;
+      min-width: 78px;
+      min-height: 36px;
+      line-height: 34px;
+      color: #fff;
+      padding: 0 1rem;
+      padding: 0 0 0 7px;
+      &::after {
+        content: '↪';
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        left: 7px;
+        color: #fff;
+        font-weight: 700;
+        margin: -18px 0 0;
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      &:first-child {
+        padding: 0;
+        order: 1;
+        &::after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        order: 2;
+        padding: 0 7px 0 0;
+        &::after {
+          content: '↩';
+          left: inherit;
+          right: 7px;
+          font-size: 10px;
+        }
+      }
+
+      &:focus {
+        background: $light-primary-dark;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.light-mode .rbc-btn-group {
+  button {
+    border: none;
+    background: $light-background-grey;
+    color: $light-black;
+    font-size: 13px;
+    padding: 0.6rem 1rem;
+    position: relative;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+
+    &.rbc-active {
+      background: $light-primary;
+      color: $light-black;
+    }
+
+    &:active:hover,
+    &:active:focus {
+      background: none;
+      opacity: 0.7;
+      color: $light-black;
+    }
+
+    &.rbc-active:hover,
+    &.rbc-active:focus {
+      background: $primary;
+      color: $light-black;
+    }
+
+    &.rbc-active:hover {
+      opacity: 0.7;
+      color: $light-black;
+    }
+
+    &:hover {
+      background: none;
+      opacity: 0.7;
+      color: $light-black;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      width: 1px;
+      z-index: 2;
+      right: 0;
+      bottom: 6px;
+      background: $light-dark;
+      color: $light-black;
+    }
+
+    &:last-child:before {
+      display: none;
+    }
+  }
+}
+
+.light-mode .rbc-toolbar-label {
+  color: $light-black;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.light-mode .rbc-month-view {
+  border: none;
+}
+
+.light-mode .rbc-header {
+  color: $light-black;
+  font-size: 11px;
+  padding: 13px 3px;
+  border-bottom: 2px $light-light solid;
+  margin: 0 0 10px;
+
+  & + .rbc-header {
+    border-left: none;
+    border-bottom: 2px $light-light solid;
+  }
+}
+
+// light month styles is here
+
+.light-mode .rbc-month-row {
+  & + .rbc-month-row {
+    border-top: 2px $light-primary-dark solid;
+  }
+
+  .rbc-date-cell {
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+}
+
+.light-mode .rbc-day-bg {
+  border-left: 2px $light-primary-dark solid;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+
+  &:hover {
+    -moz-transform: scale(0.96);
+    -webkit-transform: scale(0.96);
+    -o-transform: scale(0.96);
+    -ms-transform: scale(0.96);
+    transform: scale(0.96);
+  }
+
+  & + .rbc-day-bg {
+    border-left: 2px $light-primary-dark solid;
+  }
+  &.rbc-off-range-bg {
+    background: $light-light;
+  }
+  background: $light-background-grey;
+
+  &.rbc-today {
+    background: $light-primary;
+  }
+}
+
+.light-mode .rbc-row-content {
+  color: $light-light;
+  font-size: 16px;
+}
+
+//light events styles is here
+.light-mode .rbc-event {
+  background-color: coral;
+  margin-left: 2%;
+  &:hover {
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    opacity: 0.8;
+  }
+  &.rbc-selected {
+    background-color: coral;
+  }
+}
+
+// light agenda styles is here
+
+.light-mode .rbc-agenda-date-cell {
+  background: $light-background-grey;
+  color: $light-light;
+}
+.light-mode .rbc-agenda-time-cell {
+  background: $light-background-grey;
+  color: $light-light;
+  border-left: 1px $light-dark solid;
+}
+.light-mode .rbc-agenda-event-cell {
+  background: coral;
+  color: $light-light;
+  &:hover {
+    -moz-transform: scale(1.001);
+    -webkit-transform: scale(1.001);
+    -o-transform: scale(1.001);
+    -ms-transform: scale(1.001);
+    transform: scale(1.001);
+    opacity: 0.8;
+  }
+}

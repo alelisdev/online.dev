@@ -1,0 +1,9 @@
+@import './custom';
+@import './pages';
+@import './font';
+@import './components';
+@import "badcss.module";
+
+body {
+  font-family: Montserrat;
+}

@@ -1,0 +1,220 @@
+.meeting-page {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.light-mode .modal-title{
+
+}
+
+.babich-button {
+  background-color: rgba(74, 156, 255, 0);
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: rgba(74, 156, 255, 1);
+  }
+}
+
+.babich-call-info {
+  position: absolute;
+  left: -200%;
+  width: 100%;
+  transition: left 0.4s;
+}
+
+.babich-sidebar {
+  position: relative;
+  right: -200%;
+  transition: right 0.3s;
+}
+
+
+.main-video {
+  min-height: 700px;
+  background-color: $white;
+
+  &__video_place {
+    object-fit: cover;
+  }
+
+  &_details {
+    background: rgba(0, 0, 0, 0.5);
+
+    &_button {
+      background-color: $white;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &_call_info {
+    background: $primary-dark;
+  }
+}
+
+.note-column {
+  &_preview {
+    height: 250px;
+  }
+
+  .setting-menu {
+    .dropdown-menu {
+      right: 0;
+      bottom: 3rem;
+      height: auto;
+    }
+  }
+}
+
+
+.main-video {
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video-setting-wrapper {
+  position: relative;
+  padding-top: 75%;
+  border: solid 4px #1b1550;
+  border-radius: 11px;
+  background-color: #070b2c;
+
+  video {
+    top: 0;
+  }
+}
+
+.analysis-page {
+  padding-top: 1rem;
+
+  .analysis-video-wrapper {
+    min-height: 600px;
+    display: flex;
+
+    video {
+      width: 100%;
+      // height: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .analysis-video-wrapper {
+      min-height: 375px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .analysis-video-wrapper {
+      min-height: 350px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .analysis-video-wrapper {
+      min-height: 300px;
+    }
+  }
+
+  .accordion-item {
+    background-color: transparent;
+
+    .accordion-button {
+      background-color: #14152f;
+      color: white;
+    }
+
+    .accordion-body {
+      background-color: $primary-dark;
+
+      .analysis-survey {
+        background-color: #7a648fb8;
+      }
+    }
+
+    &.light-mode {
+      background-color: transparent;
+
+      .accordion-button {
+        background-color: $light-primary-dark;
+        color: $light-black;
+      }
+
+      .accordion-body {
+        background-color: $light-primary-dark;
+
+        .analysis-survey {
+          background-color: #7a648fb8;
+        }
+      }
+
+    }
+  }
+
+
+  .call-detail {
+    background-color: $primary-dark;
+    padding: 24px;
+    &.light-mode{
+      background-color: $light-primary-dark;
+    }
+    table {
+      width: 100%;
+
+      tr {
+        td {
+          padding: 5px;
+          width: 50%;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      padding: 5px;
+    }
+
+    &-label {
+    }
+    //TODO set this colour in global styles
+    &-value {
+      color: #20f327;
+    }
+  }
+
+  // Calendar
+  .rbc-month-view {
+    .rbc-event-content {
+      font-size: 10px;
+    }
+  }
+
+  .rbc-time-view {
+    .rbc-time-slot {
+      .rbc-label {
+        font-size: 10px;
+      }
+    }
+    .rbc-event-content {
+      font-size: 10px;
+    }
+  }
+
+  .rbc-agenda-view {
+    table.rbc-agenda-table {
+      tbody {
+        & > tr {
+          & > td {
+            word-break: break-word;
+          }
+        }
+      }
+    }
+  }
+}

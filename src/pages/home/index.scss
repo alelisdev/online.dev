@@ -1,0 +1,62 @@
+.home_info {
+  padding-top: 47px;
+
+  .bi-share.icon {
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+  .start-button {
+    &:hover {
+      background-color: $primary-dark;
+      border-color: $primary-dark;
+      color: white;
+    }
+  }
+
+  &__menu {
+    width: 30%;
+    padding: 35px 0;
+    cursor: pointer;
+    background-color: $primary-dark;
+
+    &.selected {
+      background-color: $primary;
+    }
+
+    &.light-mode {
+      background-color: $light-primary;
+    }
+  }
+}
+
+.home_video_preview {
+  padding-top: 100px;
+  width: 100%;
+  height: 500px;
+}
+
+.share-menu {
+  .dropdown-menu {
+    right: 0;
+    bottom: 2rem;
+    height: auto;
+    width: 100%;
+    min-width: max-content;
+    padding: 10px;
+
+    .menu-item {
+      display: inline;
+      margin-right: 8px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .menu-button {
+    color: white;
+  }
+}

@@ -1,0 +1,15 @@
+.loading-page {
+  background-color: #696969;
+  min-height: 745px;
+  margin-top: 76px;
+
+  &_button {
+    width: 180px;
+    height: 180px;
+    background-color: rgba($color: #242424, $alpha: 0.42);
+
+    i {
+      font-size: 80px;
+    }
+  }
+}

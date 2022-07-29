@@ -1,0 +1,128 @@
+.notepad {
+  background-color: $primary-dark;
+  height: 590px;
+
+
+
+  .tab-button {
+    display: block;
+    background: transparent;
+    color: lightgrey;
+    font-weight: normal;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0 10px;
+
+    span {
+      font-size: 12px;
+    }
+
+    &.active {
+      color: rgb(74, 156, 255);
+      font-weight: bold;
+      border-color: rgb(74, 156, 255);
+    }
+  }
+
+  textarea {
+    height: 533px;
+    background-color: transparent;
+    font-style: italic;
+    border: none;
+    border-top: 1px solid #262840;
+    color: rgba(255, 255, 255, 0.5);
+    resize: none;
+
+    &:focus,
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
+  }
+
+  // Calendar
+  .rbc-month-view {
+    .rbc-event-content {
+      font-size: 10px;
+    }
+  }
+
+  .rbc-time-view {
+    .rbc-time-slot {
+      .rbc-label {
+        font-size: 10px;
+      }
+    }
+    .rbc-event-content {
+      font-size: 10px;
+    }
+  }
+
+  .rbc-agenda-view {
+    table.rbc-agenda-table {
+      tbody {
+        & > tr {
+          & > td {
+            word-break: break-word;
+          }
+        }
+      }
+    }
+  }
+
+  .rbc-toolbar {
+    .rbc-toolbar-label {
+      font-size: 12px;
+    }
+
+    .rbc-header {
+      font-size: 12px;
+    }
+  }
+
+  ul {
+    margin-top: 10px;
+    height: 100%;
+    overflow: auto;
+
+    li {
+      margin: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
+      width: 100%;
+      &::marker {
+        content: '';
+      }
+      font-size: 12px;
+      &.active {
+        color: limegreen;
+      }
+    }
+  }
+
+  &.light-mode {
+    background-color: $light-primary-dark;
+  }
+    .tab-button {
+      display: block;
+      background: transparent;
+      color: $light-dark;
+      font-weight: normal;
+      height: 50px;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0 10px;
+
+      span {
+        font-size: 12px;
+      }
+
+      &.active {
+        color: rgb(74, 156, 255);
+        font-weight: bold;
+        border-color: rgb(74, 156, 255);
+      }
+    }
+}

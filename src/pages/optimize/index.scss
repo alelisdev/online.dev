@@ -1,0 +1,49 @@
+.optimize-page {
+  background-color: $primary-dark;
+  margin: 70px 0 0 0;
+  min-height: 745px;
+  padding-bottom: 70px;
+
+  &_optimize {
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+
+  &_content {
+    max-width: 700px;
+    padding: 80px 0;
+
+    &_icon {
+      height: 245px;
+      width: 245px;
+      border: 25px solid #2f82e727;
+      i {
+        font-size: 70px;
+      }
+    }
+  }
+
+  &.light-mode{
+    background-color: $light-primary-dark;
+    margin: 70px 0 0 0;
+    min-height: 745px;
+    padding-bottom: 70px;
+
+    &_optimize {
+      background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &_content {
+      max-width: 700px;
+      padding: 80px 0;
+
+      &_icon {
+        height: 245px;
+        width: 245px;
+        border: 25px solid #2f82e727;
+        i {
+          font-size: 70px;
+        }
+      }
+    }
+  }
+}

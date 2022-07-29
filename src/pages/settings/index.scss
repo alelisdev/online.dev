@@ -1,0 +1,99 @@
+
+//TODO add scss variables here
+
+.setting-page {
+  padding: 50px 0;
+
+  .user-profile-wrapper {
+    position: relative;
+
+    .user-profile {
+      position: relative;
+      z-index: 2;
+      padding: 150px 0 0 50px;
+
+      .user-avatar-wrapper {
+        cursor: pointer;
+
+        label {
+          cursor: pointer;
+        }
+
+        img.user-avatar {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          border: 5px solid #ffffff;
+          object-fit: cover;
+        }
+      }
+
+      .user-info {
+        margin-left: 50px;
+
+        .username {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .user-profile-bg-wrapper {
+      background: #ffffff40;
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      img.user-profile-bg {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px 12px;
+        object-fit: cover;
+      }
+
+      &.light-mode{
+        background: #cecece;
+      }
+    }
+
+    .user-profile-bg-edit-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background-color: #ffffff;
+      color: #333;
+      padding: 9px 13px;
+      border-radius: 50%;
+      font-size: 16px;
+      z-index: 5;
+
+      &:hover {
+        background: #d6d6d6;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .option-bar {
+    margin-top: 50px;
+
+    .option-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
+  .button-wrapper {
+    margin-top: 20px;
+
+    button {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+
+.meeting-calendar {
+  background-color: $white;
+  border-radius: 12px;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.meeting-form {
+  padding: 10px;
+
+  input {
+    padding: 14px 6px;
+  }
+
+  .main-input-component:first-child {
+    margin-bottom: 12px;
+  }
+
+  // custom datetime picker
+  .datetime-picker-wrapper {
+    margin-top: 20px;
+
+    .datetime-picker-label {
+      margin-bottom: 0.3rem;
+      color: #6e6e77;
+    }
+
+
+    input {
+      background-color: $primary-dark;
+      color: white;
+      border-style: solid;
+      border-radius: 8px;
+      padding-top: 14px;
+      border-width: 1px;
+      padding-bottom: 14px;
+      border-color: $primary;
+    }
+
+    &.light-mode{
+      input {
+        background-color: $light-primary-dark;
+        color: $light-black;
+        border-radius: 8px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $light-primary;
+      }
+    }
+  }
+
+
+  .meeting-link {
+    margin-top: 20px;
+  }
+}

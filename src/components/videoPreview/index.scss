@@ -1,0 +1,55 @@
+$bg-dark-opacity: rgba(0, 0, 0, 0.4);
+
+.background-blur {
+  background-color: $bg-dark-opacity;
+  position: absolute;
+}
+
+.video_preview {
+  background-color: white;
+  height: 100%;
+  border-radius: 10px;
+
+  &__grid {
+    width: 500px;
+    height: 500px;
+    border-left: 3px dotted #28c36f;
+    border-right: 3px dotted #28c36f;
+    position: absolute;
+    z-index: 2;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &_training {
+    @extend .background-blur;
+  }
+
+  &_user {
+    @extend .background-blur;
+    bottom: 22px;
+    left: 22px;
+    height: 40px;
+
+    &_record {
+      width: 10px;
+      height: 10px;
+      background-color: #5ed03c;
+    }
+  }
+
+  &_btn_grid {
+    position: absolute;
+    bottom: 22px;
+    right: 22px;
+  }
+
+  &_btn_icons {
+    width: 40px;
+    height: 40px;
+    background-color: $bg-dark-opacity;
+    &.selected {
+      background-color: #ff6464;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+.user_header {
+  padding: 10px 10px;
+  background: $primary-dark;
+
+  div[role='menuitem'] {
+    cursor: pointer;
+  }
+
+  &__menu_selected::after {
+    position: absolute;
+    content: '';
+    width: 45px;
+    background: $primary;
+    height: 3px;
+    bottom: 0;
+  }
+
+  &__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-avatar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .header-dropdown-wrapper {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 0px 6px #00000073;
+    z-index: 9999;
+    background: $white;
+
+    .user-dropdown-header {
+      background-color: #2d83ef;
+      padding: 14px 12px;
+
+      .user-dropdown-header-username {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
+    .user-dropdown-footer {
+      padding: 12px 24px;
+      border-top: 1px solid #eee;
+    }
+
+    .menu-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #333333;
+        padding: 12px;
+        transition: all 0.3s ease-out;
+        border: none;
+        // border-bottom: 1px solid #444444;
+        background: $white;
+        cursor: pointer;
+
+        &:hover {
+          color: #0371f7;
+        }
+      }
+
+      .menu-last-item {
+        border: none;
+      }
+
+      .menu-item-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-item-title {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: $primary;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .user_header {
+    padding: 25px 75px;
+  }
+}
+
+.user_header.light-mode {
+  padding: 25px 10px;
+  background: $light-primary-dark;
+
+  div[role='menuitem'] {
+    cursor: pointer;
+  }
+
+
+
+
+  &__menu_selected::after {
+    position: absolute;
+    content: '';
+    width: 45px;
+    background: $light-grey;
+    height: 3px;
+    bottom: 0;
+  }
+
+  &__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-avatar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .header-dropdown-wrapper {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 0px 6px #00000073;
+    z-index: 9999;
+    background: $light-black;
+
+    .user-dropdown-header {
+      background-color: $light-primary;
+      padding: 14px 12px;
+
+      .user-dropdown-header-username {
+        color: $light-black;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
+    .user-dropdown-footer {
+      padding: 12px 24px;
+      border-top: 1px solid $light-black;
+    }
+
+    .menu-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #333333;
+        padding: 12px;
+        transition: all 0.3s ease-out;
+        border: none;
+        // border-bottom: 1px solid #444444;
+        background:  $light-black;
+        cursor: pointer;
+
+        &:hover {
+          color: $light-primary;
+        }
+      }
+
+      .menu-last-item {
+        border: none;
+      }
+
+      .menu-item-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-item-title {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: $light-primary;
+  }
+}
+

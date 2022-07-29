@@ -1,0 +1,26 @@
+.calendar-modal-container {
+  width: 588px !important;
+
+  .modal-header {
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .modal-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .meeting-link {
+      label.form-label {
+        color: #6e6e77;
+      }
+    }
+  }
+
+  .modal-footer {
+    border-top: none;
+  }
+}

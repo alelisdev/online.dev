@@ -1,0 +1,20 @@
+.range-component {
+  span {
+    color: #545684;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $white;
+    border-radius: 50%;
+    background: $white;
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 1px 1px 1px $white, 0px 0px 1px $white;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+}

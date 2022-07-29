@@ -1,0 +1,48 @@
+$primary: #4a9cff;
+$light: #fff;
+$primary-dark: #14152f;
+$primary-dark-input: #202044;
+$secondary: #9732e7;
+$dark: #191919;
+$background: #050515;
+$white: #fff;
+$background-grey: #1c1d3c;
+
+$light-primary: #a5dcff;
+$light-light: #f9f8ed;
+$light-primary-dark: #dae3e3;
+$light-primary-dark-input: #cecedf;
+$light-secondary: #f8abfc;
+$light-dark: #627a84;
+$light-background: #f2f5f5;
+$light-white: #fff;
+$light-grey:#8c9191;
+$light-background-grey: #8c9194;
+$light-black: #272b2b;
+
+$font-size-base: 0.8rem;
+$font-weight-bold: 600;
+
+:export {
+  primary: $primary;
+  light: $light;
+  primary-dark:  $primary-dark;
+  secondary:  $secondary;
+  dark: $dark;
+  background: $background;
+  background_grey:$background-grey;
+  white: $white;
+  primary_dark_input:$primary-dark-input;
+  //
+  light_primary: $light-primary;
+  light_light: $light-light;
+  light_primary_dark: $light-primary-dark;
+  light_secondary: $light-secondary;
+  light_dark: $light-dark;
+  light_background: $light-background;
+  light_white: $light-white;
+  light_grey: $light-grey;
+  light_background_grey:$light-background-grey;
+  light_black: $light-black;
+  light_primary_dark_input:$light-primary-dark-input;
+}

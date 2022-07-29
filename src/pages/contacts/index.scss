@@ -1,0 +1,90 @@
+.contacts-page {
+  padding: 50px 0;
+
+  .contacts-options-wrapper {
+    background: $primary-dark;
+    padding: 24px;
+    height: 100%;
+
+    &.light-mode {
+      background-color: $light-primary-dark;
+    }
+
+    .button-wrapper {
+      width: 100%;
+    }
+  }
+
+  .contracts-wrapper {
+    height: 50vh;
+    overflow: scroll;
+    transition: 0.5s;
+    padding: 20px 50px;
+    background: $primary-dark;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &.light-mode {
+      background-color: $light-primary-dark;
+    }
+  }
+
+  .contact-form {
+    padding: 20px 50px;
+
+    .contact-form-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid $white;
+      cursor: pointer;
+    }
+
+    .contact-form-inputs > div {
+      margin-bottom: 12px;
+        color: $light-primary-dark;
+
+    }
+
+  }
+}
+
+.contact-modal-form {
+  padding: 10px;
+
+  .contact-form-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid $white;
+    cursor: pointer;
+  }
+
+  .contact-form-inputs > div {
+    margin-bottom: 12px;
+  }
+}
+
+.contact-item-wrapper {
+  cursor: pointer;
+  padding: 12px;
+
+  &:hover {
+    background-color: $light-primary;
+  }
+
+  .contact-avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid $white;
+    object-fit: cover;
+  }
+  .contact-info-wrapper {
+  }
+
+  .contact-icon-wrapper {
+    font-size: 24px;
+  }
+}

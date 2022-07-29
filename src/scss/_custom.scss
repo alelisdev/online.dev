@@ -1,0 +1,25 @@
+$primary: #4a9cff;
+$light: #fff;
+$primary-dark: #14152f;
+$secondary: #9732e7;
+$dark: #191919;
+$background: #050515;
+$white: #fff;
+
+$light-primary: #a5dcff;
+$light-light: #f9f8ed;
+$light-primary-dark: #dae3e3;
+$light-secondary: #f8abfc;
+$light-dark: #627a84;
+$light-background: #f2f5f5;
+$light-white: #fff;
+$light-grey:#8c9191;
+$light-black: #272b2b;
+
+$font-size-base: 0.8rem;
+$font-weight-bold: 600;
+
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';

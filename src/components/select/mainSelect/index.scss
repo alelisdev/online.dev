@@ -1,0 +1,8 @@
+.main-select {
+  select {
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}

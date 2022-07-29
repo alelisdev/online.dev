@@ -1,0 +1,18 @@
+.user_training {
+  margin-top: 70px;
+  &__guidelines {
+    background-color: $primary-dark;
+  }
+
+  &__guideline {
+    border-top: 1px solid #262840;
+
+    i.bi-info-circle {
+      color: #343653;
+    }
+
+    &__progress {
+      width: calc(100% - 30px);
+    }
+  }
+}
